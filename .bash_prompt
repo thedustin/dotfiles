@@ -1,0 +1,40 @@
+
+__exit_code_to_smile(){ 
+	last_exit_code=$?
+	
+	case $last_exit_code in
+		0)
+			echo -n "😊 "
+			;;
+		127)
+			echo -n "😰 "
+			;;
+		130)
+			echo -n "😧 "
+			;;
+		*)
+			echo -n "😣 ($last_exit_code)"
+			;;
+	esac
+	
+	return $last_exit_code;
+}
+
+ps1_time="\[\e[0;35m\][\t]\[\e[00m\]"
+ps1_exit_code=" \$(__exit_code_to_smile)"
+ps1_user=" \[\033[00;32m\]\u\[\033[00m\]"
+ps1_path=":\[\033[01;34m\]\w\[\033[00m\]"
+ps1_git="\$(__git_ps1)"
+ps1_end="\n\$ "
+
+PS1="${ps1_time}${ps1_exit_code}${ps1_user}${ps1_path}${ps1_git}${ps1_end}"
+
+__update_terminal_title()
+{
+	#local default_terminal_title="$(update_terminal_cwd)"
+	local default_terminal_title=$(update_terminal_cwd | ansifilter)
+	
+	printf '\033]0;%s (Git: %s)\007' "$default_terminal_title" "$(__git_ps1)"
+}
+
+#PROMPT_COMMAND="__update_terminal_title"
