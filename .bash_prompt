@@ -6,6 +6,9 @@ __exit_code_to_smile(){
 		0)
 			echo -n "😊 "
 			;;
+		126)
+			echo -n "👮 "
+			;;
 		127)
 			echo -n "😰 "
 			;;
