@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DOTFILES_DIRECTORY="$(dirname $(realpath $0))/../"
+DOTFILES_DIRECTORY="$(realpath -L $DOTFILES_DIRECTORY)"
+
+cd ~
+
+for DOTFILE in {.aliases, .bash_profile, .bash_prompt, .bashrc, .dircolors, .exports, .functions, .inputrc}
+do
+    ln -s "${DOTFILES_DIRECTORY}/$DOTFILE"
+done
