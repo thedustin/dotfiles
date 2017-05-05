@@ -1,5 +1,4 @@
 bash
-bash-completion
 homebrew/versions/bash-completion2
 brew-cask-completion
 homebrew/php/composer
