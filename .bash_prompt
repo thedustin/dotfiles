@@ -1,4 +1,7 @@
 
+# trailing directory components in promt
+export PROMPT_DIRTRIM=3
+
 __exit_code_to_smile(){ 
 	last_exit_code=$?
 	
