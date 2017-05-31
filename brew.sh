@@ -54,7 +54,6 @@ brew tap homebrew/php
 brew install automake
 
 brew install php71
-brew install php71-xdebug php71-apcu
 brew install composer
 brew install phpunit
 
