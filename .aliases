@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -22,7 +23,7 @@ alias define="trans -d en:en"
 alias space="du -h -d 1"
 
 alias php56="$(brew --prefix homebrew/php/php56)/bin/php"
-alias php70="$(brew --prefix homebrew/php/php70)/bin/php"
+alias php71="$(brew --prefix homebrew/php/php71)/bin/php"
 
 alias php-ini='php --ini | grep -e ".ini$"'
 
@@ -33,14 +34,14 @@ alias php-ini='php --ini | grep -e ".ini$"'
 
 export MARKPATH=$HOME/.marks
 
-function jump { 
+function jump {
     cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
-function mark { 
+function mark {
     mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
-function unmark { 
-    rm -i $MARKPATH/$1 
+function unmark {
+    rm -i $MARKPATH/$1
 }
 function marks {
     ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
