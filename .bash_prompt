@@ -2,9 +2,9 @@
 # trailing directory components in promt
 export PROMPT_DIRTRIM=3
 
-__exit_code_to_smile(){ 
+__exit_code_to_smile(){
 	last_exit_code=$?
-	
+
 	case $last_exit_code in
 		0)
 			echo -n "😊 "
@@ -22,7 +22,7 @@ __exit_code_to_smile(){
 			echo -n "😣 ($last_exit_code)"
 			;;
 	esac
-	
+
 	return $last_exit_code;
 }
 
@@ -39,8 +39,9 @@ __update_terminal_title()
 {
 	#local default_terminal_title="$(update_terminal_cwd)"
 	local default_terminal_title=$(update_terminal_cwd | ansifilter)
-	
+
 	printf '\033]0;%s (Git: %s)\007' "$default_terminal_title" "$(__git_ps1)"
 }
 
 #PROMPT_COMMAND="__update_terminal_title"
+export PROMPT_COMMAND="\history -a; \history -n; $PROMPT_COMMAND"

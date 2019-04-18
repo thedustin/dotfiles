@@ -1,6 +1,7 @@
 export EDITOR="micro"
 
 export BREW_PREFIX=`brew --prefix`
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS

@@ -17,25 +17,20 @@ brew install gnu-sed --with-default-names
 # Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 brew install bash
-brew install bash-completion@2
-brew install homebrew/completions/brew-cask-completion
 
-# Install wget with IRI support
-brew install wget --with-iri
+brew install bash-completion
+
+brew install homebrew/completions/brew-cask-completion
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/nano
+#brew install homebrew/dupes/nano
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # run script when a file changes (see http://entrproject.org/)
 brew install entr
-
-# Install other useful binaries
-brew install the_silver_searcher
-brew install fzf
 
 brew install git
 brew install imagemagick --with-webp
@@ -49,15 +44,30 @@ brew install terminal-notifier
 
 # thanks paul, now my "guys"
 
-brew tap homebrew/php
-
-brew install automake
-
-brew install php71
+brew install php
 brew install composer
 brew install phpunit
 
+brew install curl
+brew install httpie
+brew install telnet
+
+brew install go
+brew install lua
+brew install python
+
+brew install htop
+brew install tldr
+brew install watch
+
 brew install micro
+
+brew cask install docker
+brew cask install enpass
+brew cask install postman
+#brew cask install reeder
+brew cask install spotify
+brew cask install visual-studio-code
 
 # Remove outdated versions from the cellar
 brew cleanup
