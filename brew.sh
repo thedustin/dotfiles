@@ -67,6 +67,7 @@ brew cask install enpass
 brew cask install postman
 #brew cask install reeder
 brew cask install spotify
+brew cask install typora
 brew cask install visual-studio-code
 
 # Remove outdated versions from the cellar
