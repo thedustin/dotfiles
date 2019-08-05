@@ -22,9 +22,6 @@ alias define="trans -d en:en"
 
 alias space="du -h -d 1"
 
-alias php56="$(brew --prefix homebrew/php/php56)/bin/php"
-alias php71="$(brew --prefix homebrew/php/php71)/bin/php"
-
 alias php-ini='php --ini | grep -e ".ini$"'
 
 ###
