@@ -9,10 +9,17 @@ brew upgrade
 # GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 brew install moreutils
+brew install diffutils
+
 # GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew install findutils
 # GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
+
+brew install make
+brew install gnu-tar
+brew install grep
+brew install gawk
 
 # Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.

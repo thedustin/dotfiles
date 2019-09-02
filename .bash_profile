@@ -34,7 +34,19 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
-PATH=~/bin:~/.composer/vendor/bin:~/go/bin:$PATH
+export PATH=~/bin:~/.composer/vendor/bin:~/go/bin:$PATH
+
+##
+# GNU Binaries
+
+# gnu tools we want!!
+export PATH
+PATH="${BREW_PREFIX}/opt/coreutils/bin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-sed/bin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-tar/bin:$PATH"
+PATH="${BREW_PREFIX}/opt/grep/bin:$PATH"
+PATH="${BREW_PREFIX}/opt/make/bin:$PATH"
+export MANPATH="${BREW_PREFIX}/opt/coreutils/bin/gnuman:$MANPATH"
 
 ##
 ## gotta tune that bash_history…
