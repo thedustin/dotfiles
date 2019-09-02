@@ -1,4 +1,6 @@
 
+source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
+
 # trailing directory components in promt
 export PROMPT_DIRTRIM=3
 
