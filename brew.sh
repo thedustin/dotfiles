@@ -77,5 +77,8 @@ brew cask install spotify
 brew cask install typora
 brew cask install visual-studio-code
 
+# Install my favorite monospace font
+brew install homebrew/cask-fonts/font-hasklig
+
 # Remove outdated versions from the cellar
 brew cleanup
