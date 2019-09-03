@@ -71,6 +71,8 @@ if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
 fi;
 
 # bash completion.
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 if  which brew > /dev/null && [ -f "${BREW_PREFIX}/share/bash-completion/bash_completion" ]; then
     source "${BREW_PREFIX}/share/bash-completion/bash_completion"
 elif [ -f /etc/bash_completion ]; then
