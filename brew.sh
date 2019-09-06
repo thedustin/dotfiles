@@ -71,6 +71,7 @@ brew install micro
 
 brew cask install docker
 brew cask install enpass
+brew cask install pastebot
 brew cask install postman
 #brew cask install reeder
 brew cask install spotify
