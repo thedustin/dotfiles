@@ -23,5 +23,6 @@
     "terminal.integrated.enableBell": true,
     "editor.fontSize": 13,
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 120
+    "editor.wordWrapColumn": 120,
+    "editor.wrappingIndent": "indent"
 }
