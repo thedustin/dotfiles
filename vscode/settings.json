@@ -1,6 +1,5 @@
 {
     "workbench.colorTheme": "Quiet Light",
-    "window.zoomLevel": 1,
     "workbench.tree.indent": 13,
     "html.format.endWithNewline": true,
     "files.autoSave": "onWindowChange",
@@ -24,5 +23,6 @@
     "editor.fontSize": 13,
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 120,
-    "editor.wrappingIndent": "indent"
+    "editor.wrappingIndent": "indent",
+    "gitlens.defaultDateStyle": "absolute"
 }
