@@ -15,7 +15,10 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "gitlens.defaultDateStyle": "absolute",
+    "go.formatTool": "goimports",
+    "go.testFlags": ["-v"],
     "html.format.endWithNewline": true,
+    "editor.rulers": [80, 120],
     "search.showLineNumbers": true,
     "terminal.integrated.enableBell": true,
     "window.clickThroughInactive": false,
@@ -24,5 +27,6 @@
     "window.newWindowDimensions": "maximized",
     "workbench.colorTheme": "Quiet Light",
     "workbench.tree.indent": 13,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "go.useLanguageServer": true
 }
