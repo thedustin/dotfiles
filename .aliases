@@ -1,85 +1,49 @@
 #!/usr/bin/env bash
 
+# Easier navigation: .., ..., ~ and -
 alias ..='cd ..'
+alias cd..="cd .."
 alias ...='cd ../..'
 
-function _cd_ls()
-{
-	cd $@
-	ls -Al
+function cl() {
+    cd $@ && ls -Al
 }
 
-alias cl="_cd_ls"
+alias gti='git'
 
 alias rm='safe-rm'
-alias finder="open"
-
-alias php-lint='find . -type f \( -not -path "*/vendor/*" \) -name "*.php" -exec php -l {} \; | grep -v "No syntax errors detected"'
-
-alias de="trans -b en:de --"
-alias en="trans -b de:en --"
-alias define="trans -d en:en"
-
-alias space="du -h -d 1"
+alias finder='open'
 
 alias php-ini='php --ini | grep -e ".ini$"'
+alias php-lint='find . -type f \( -not -path "*/vendor/*" \) -name "*.php" -exec php -l {} \; | grep -v "No syntax errors detected"'
 
-###
-# Filesystem Markers & Jump
-# http://alias.sh/filesystem-markers-jump
-###
-
-export MARKPATH=$HOME/.marks
-
-function jump {
-    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
-}
-function mark {
-    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
-}
-function unmark {
-    rm -i $MARKPATH/$1
-}
-function marks {
-    ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
-}
-
-# tab-completition
-_completemarks() {
-  local curw=${COMP_WORDS[COMP_CWORD]}
-#  local wordlist=$(find $MARKPATH -type l -printf "%f\n")
-  local wordlist=$(find $MARKPATH -type l | xargs -n1 basename)
-  COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
-  return 0
-}
-
-complete -F _completemarks jump unmark
-
-###
+##
 # history-search
-# http://alias.sh/history-search-0
-###
+# See http://alias.sh/history-search-0
 
 alias history='history | grep --color=auto'
 
-###
+##
 # Compact, colorized git log
-# http://alias.sh/compact-colorized-git-log
-###
+# See http://alias.sh/compact-colorized-git-log
 
 alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-###
+##
 # Git
-###
 
 alias gitgraph='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
-###
+##
 # Paul Irish
-###
+# See https://github.com/paulirish/dotfiles/blob/master/.aliases
 
-###
+alias cask='brew cask' # i <3 u cask
+alias where=which # sometimes i forget
+
+alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+
+##
 # time to upgrade `ls`
 
 # use coreutils `ls` if possible…
@@ -92,6 +56,3 @@ export CLICOLOR_FORCE=1
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
 alias ls='gls -AFh ${colorflag} --group-directories-first'
 alias lsd='ls -l | grep "^d"' # only directories
-#    `la` defined in .functions
-###
-
