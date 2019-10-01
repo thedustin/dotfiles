@@ -71,33 +71,11 @@ if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
 fi;
 
 # bash completion.
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-if  which brew > /dev/null && [ -f "${BREW_PREFIX}/share/bash-completion/bash_completion" ]; then
-    source "${BREW_PREFIX}/share/bash-completion/bash_completion"
-elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
-fi;
-
-# homebrew completion
-if  which brew > /dev/null; then
-    source "${BREW_PREFIX}/etc/bash_completion.d/brew"
-fi;
-
-# hub completion
-if  which hub > /dev/null; then
-    source "${BREW_PREFIX}/etc/bash_completion.d/hub.bash_completion.sh"
-fi;
-
-# vagrant completion
-if [ -f ${BREW_PREFIX}/etc/bash_completion.d/vagrant ]; then
-    source ${BREW_PREFIX}/etc/bash_completion.d/vagrant
+if [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]]; then
+    . "/usr/local/etc/profile.d/bash_completion.sh"
+else
+    echo "Failed to load bash completion" >&2
 fi
-
-# Enable tab completion for `g` by marking it as an alias for `git`
-if type __git_complete &> /dev/null; then
-    __git_complete g __git_main
-fi;
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ ! $(which brew) ]] ; then
+    echo "Brew is not installed on this system, see https://brew.sh for installation guide"
+    exit 1
+fi
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -80,6 +85,9 @@ brew cask install visual-studio-code
 
 # Install my favorite monospace font
 brew install homebrew/cask-fonts/font-hasklig
+
+# auto completion for docker
+ln -s /Applications/Docker.app/Contents/Resources/etc/*.bash-completion $(brew --prefix)/etc/bash_completion.d
 
 # Remove outdated versions from the cellar
 brew cleanup
