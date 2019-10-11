@@ -31,8 +31,8 @@ mkdir -p ~/.git_core/
 touch ~/.git_core/.gitignore
 git config --global core.excludesfile ~/.git_core/.gitignore
 
-# Optional: symlink template/base
-ln -s ./git/.gitignore.dist ~/.git_core/.gitignore
+# Optional: copy template/base
+cd ~/dotfiles/git/ && cp ./.gitignore.dist ~/.git_core/.gitignore
 ```
 
 ### Setup git aliases
