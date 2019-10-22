@@ -16,12 +16,12 @@ eval `keychain --agents ssh --eval id_rsa`
 
 # generic colouriser
 GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n "$GRC" ]
-    then
-        alias colourify="$GRC -es --colour=auto"
-        alias configure='colourify ./configure'
-        for app in {diff,make,gcc,g++,ping,traceroute}; do
-            alias "$app"='colourify '$app
+if [ "$TERM" != dumb ] && [ -n "$GRC" ]; then
+    alias colourify="$GRC -es --colour=auto"
+    alias configure='colourify ./configure'
+
+    for app in {diff,make,gcc,g++,ping,traceroute}; do
+        alias "$app"='colourify '$app
     done
 fi
 
@@ -41,12 +41,13 @@ export PATH=~/bin:~/.composer/vendor/bin:~/go/bin:$PATH
 
 # gnu tools we want!!
 export PATH
-PATH="${BREW_PREFIX}/opt/coreutils/bin:$PATH"
-PATH="${BREW_PREFIX}/opt/gnu-sed/bin:$PATH"
-PATH="${BREW_PREFIX}/opt/gnu-tar/bin:$PATH"
-PATH="${BREW_PREFIX}/opt/grep/bin:$PATH"
-PATH="${BREW_PREFIX}/opt/make/bin:$PATH"
-export MANPATH="${BREW_PREFIX}/opt/coreutils/bin/gnuman:$MANPATH"
+PATH="${BREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/grep/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/make/libexec/gnubin:$PATH"
+
+export MANPATH="${BREW_PREFIX}/opt/coreutils/libexec/gnuman:$MANPATH"
 
 ##
 ## gotta tune that bash_history…
@@ -57,10 +58,9 @@ export HISTTIMEFORMAT='%F %T '
 
 # keep history up to date, across sessions, in realtime
 #  http://unix.stackexchange.com/a/48113
-export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
-export HISTSIZE=1000000                          # big big history (default is 500)
-export HISTFILESIZE=$HISTSIZE                   # big big history
-type shopt &> /dev/null && shopt -s histappend  # append to history, don't overwrite it
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
+export HISTSIZE=1000000                 # big big history (default is 500)
+export HISTFILESIZE=$HISTSIZE           # big big history
 
 ##
 ## Completion…
@@ -82,3 +82,6 @@ shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# append to history, don't overwrite it
+shopt -s histappend

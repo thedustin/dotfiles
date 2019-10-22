@@ -47,6 +47,12 @@ git config --global alias.dff diff
 git config --global alias.pul pull
 ```
 
+### Setup git differ
+
+```bash
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+```
+
 ### Terminal Theme
 
 My favorite terminal theme ist [Smyck](https://github.com/hukl/Smyck-Color-Scheme) (this way I don‘t need to search for it again and again…)

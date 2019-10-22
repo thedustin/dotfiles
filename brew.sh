@@ -68,9 +68,15 @@ brew install go
 brew install lua
 brew install python
 
-brew install htop
-brew install tldr
 brew install watch
+
+# Ted what is my one rule? New is always better!
+brew install htop          # new top
+brew install tldr          # new man
+
+brew install bat           # new cat
+brew install prettyping    # new ping
+brew install diff-so-fancy # new diff
 
 brew install micro
 
