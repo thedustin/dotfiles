@@ -18,8 +18,8 @@ brew install diffutils
 
 # GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew install findutils
-# GNU `sed`, overwriting the built-in `sed`
-brew install gnu-sed --with-default-names
+# GNU `sed`
+brew install gnu-sed
 
 brew install make
 brew install gnu-tar
