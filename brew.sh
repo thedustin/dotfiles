@@ -23,8 +23,11 @@ brew install gnu-sed
 
 brew install make
 brew install gnu-tar
+brew install gnu-time
 brew install grep
+brew install ripgrep
 brew install gawk
+brew install safe-rm
 
 # Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
@@ -44,13 +47,14 @@ brew install homebrew/dupes/screen
 # run script when a file changes (see http://entrproject.org/)
 brew install entr
 
-brew install git
+brew install git git-gui
 brew install imagemagick --with-webp
 brew install node # This installs `npm` too using the recommended installation method
 brew install rename
 brew install tree
 brew install zopfli
-#brew install ffmpeg --with-libvpx
+brew install ffmpeg --with-libvpx
+brew install graphviz
 
 brew install terminal-notifier
 
@@ -67,8 +71,10 @@ brew install telnet
 brew install go
 brew install lua
 brew install python
+brew install ruby
 
 brew install watch
+brew install docker docker-machine helm minikube kubectx
 
 # Ted what is my one rule? New is always better!
 brew install htop          # new top
