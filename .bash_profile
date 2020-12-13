@@ -44,8 +44,13 @@ export PATH
 PATH="${BREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-time/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/grep/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/make/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/gnu-units/libexec/gnubin:$PATH"
+PATH="/Users/dustinbreuer/.cargo/bin:$PATH"
+PATH="/usr/local/opt/ruby/bin:$PATH"
+PATH="$(gem env gemdir)/bin:$PATH"
 
 export MANPATH="${BREW_PREFIX}/opt/coreutils/libexec/gnuman:$MANPATH"
 
@@ -85,3 +90,5 @@ shopt -s cdspell;
 
 # append to history, don't overwrite it
 shopt -s histappend
+
+export PATH="$HOME/.cargo/bin:$PATH"

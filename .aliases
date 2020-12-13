@@ -60,3 +60,5 @@ alias lsd='ls -l | grep "^d"' # only directories
 
 alias ping='prettyping --nolegend'
 alias cat='bat'
+
+alias say='say -v Daniel'

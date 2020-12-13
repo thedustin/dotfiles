@@ -28,5 +28,8 @@
     "workbench.colorTheme": "Quiet Light",
     "workbench.tree.indent": 13,
     "workbench.tree.renderIndentGuides": "always",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "window.zoomLevel": 0,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.renderWhitespace": "none"
 }
