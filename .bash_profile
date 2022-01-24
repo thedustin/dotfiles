@@ -12,7 +12,7 @@ case $- in
 esac
 
 # keychain, so we do not need to enter the passphrase each time
-eval `keychain --agents ssh --eval id_rsa`
+eval `keychain --agents ssh --eval id_rsa id_rsa_gmail`
 
 # generic colouriser
 GRC=`which grc`
@@ -48,7 +48,7 @@ PATH="${BREW_PREFIX}/opt/gnu-time/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/grep/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/make/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-units/libexec/gnubin:$PATH"
-PATH="/Users/dustinbreuer/.cargo/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="$(gem env gemdir)/bin:$PATH"
 
@@ -90,5 +90,3 @@ shopt -s cdspell;
 
 # append to history, don't overwrite it
 shopt -s histappend
-
-export PATH="$HOME/.cargo/bin:$PATH"

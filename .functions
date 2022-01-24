@@ -70,3 +70,17 @@ function extract() {
         echo "'$1' is not a valid file"
     fi
 }
+
+function drun(){
+    if [[ ! -e ~/.docker_history ]]; then
+        touch ~/.docker_history
+    fi
+
+    docker run \
+        --volume="$HOME/.docker_history:/.bash_history" \
+        --env HISTFILE=/.bash_history \
+        --volume="$(pwd):/workdir" \
+        --workdir=/workdir \
+        --user=$(id -u ${USER}):$(id -g ${USER}) \
+        -it --rm $*
+}

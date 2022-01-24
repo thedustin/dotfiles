@@ -1,6 +1,5 @@
 {
     "editor.find.addExtraSpaceOnTop": false,
-    "editor.fontFamily": "Hasklig, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.suggest.localityBonus": true,
@@ -8,14 +7,14 @@
     "editor.wordWrapColumn": 120,
     "editor.wrappingIndent": "indent",
     "files.associations": {
-        "Dockerfile*": "dockerfile"
+        "Dockerfile*": "dockerfile",
+        "*.twig": "twig"
     },
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "gitlens.defaultDateStyle": "absolute",
-    "go.formatTool": "goimports",
     "go.testFlags": ["-v"],
     "html.format.endWithNewline": true,
     "editor.rulers": [80, 120],
@@ -28,8 +27,35 @@
     "workbench.colorTheme": "Quiet Light",
     "workbench.tree.indent": 13,
     "workbench.tree.renderIndentGuides": "always",
-    "go.useLanguageServer": true,
-    "window.zoomLevel": 0,
     "C_Cpp.updateChannel": "Insiders",
-    "editor.renderWhitespace": "none"
+    "editor.fontFamily": "Hasklig, Menlo, Monaco, 'Courier New', monospace",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "go.useLanguageServer": true,
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "editor.renderWhitespace": "none",
+    "plantuml.java": "/usr/bin/java",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "telemetry.enableTelemetry": false,
+    "workbench.enableExperiments": false,
+    "css.lint.important": "warning",
+    "twig-language-2.cssInsertLines": true
 }

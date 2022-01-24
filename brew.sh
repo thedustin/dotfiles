@@ -64,6 +64,8 @@ brew install php
 brew install composer
 brew install phpunit
 
+composer g require psy/psysh:@stable
+
 brew install curl
 brew install httpie
 brew install telnet
@@ -74,7 +76,12 @@ brew install python
 brew install ruby
 
 brew install watch
-brew install docker docker-machine helm minikube kubectx
+
+brew install docker
+brew install docker-machine
+brew install helm
+brew install minikube
+brew install kubectx
 
 # Ted what is my one rule? New is always better!
 brew install htop          # new top
@@ -86,11 +93,12 @@ brew install diff-so-fancy # new diff
 
 brew install micro
 
+brew cask install chromium
 brew cask install docker
 brew cask install enpass
+brew cask install google-chrome
 brew cask install pastebot
 brew cask install postman
-#brew cask install reeder
 brew cask install spotify
 brew cask install typora
 brew cask install visual-studio-code
