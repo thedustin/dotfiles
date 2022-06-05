@@ -14,17 +14,6 @@ esac
 # keychain, so we do not need to enter the passphrase each time
 eval `keychain --agents ssh --eval id_rsa id_rsa_gmail`
 
-# generic colouriser
-GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n "$GRC" ]; then
-    alias colourify="$GRC -es --colour=auto"
-    alias configure='colourify ./configure'
-
-    for app in {diff,make,gcc,g++,ping,traceroute}; do
-        alias "$app"='colourify '$app
-    done
-fi
-
 # highlighting inside manpages and elsewhere
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
@@ -41,6 +30,7 @@ export PATH=~/bin:~/.composer/vendor/bin:~/go/bin:$PATH
 
 # gnu tools we want!!
 export PATH
+
 PATH="${BREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
@@ -48,6 +38,7 @@ PATH="${BREW_PREFIX}/opt/gnu-time/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/grep/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/make/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/opt/gnu-units/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/opt/python@3.9/libexec/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="$(gem env gemdir)/bin:$PATH"

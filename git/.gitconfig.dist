@@ -1,0 +1,9 @@
+[core]
+	excludesfile = ~/.git_core/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+	stauts = status
+	dff = diff
+	pul = pull
+[init]
+	defaultBranch = main

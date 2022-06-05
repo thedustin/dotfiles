@@ -29,13 +29,13 @@ brew install ripgrep
 brew install gawk
 brew install safe-rm
 
-# Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
+# Updated shells
+# Note: don’t forget to add `/usr/local/bin/<EACHSHELL>` to `/etc/shells` before running `chsh`.
 brew install bash
+brew install zsh
+brew install fish
 
-brew install bash-completion
-
-brew install homebrew/completions/brew-cask-completion
+brew install bash-completion@2
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
@@ -69,8 +69,12 @@ composer g require psy/psysh:@stable
 brew install curl
 brew install httpie
 brew install telnet
+brew install wget
 
 brew install go
+brew install rust
+brew install cmake
+brew install automake
 brew install lua
 brew install python
 brew install ruby
@@ -83,7 +87,7 @@ brew install helm
 brew install minikube
 brew install kubectx
 
-# Ted what is my one rule? New is always better!
+# “Ted what is my one rule? New is always better!”
 brew install htop          # new top
 brew install tldr          # new man
 
@@ -92,22 +96,27 @@ brew install prettyping    # new ping
 brew install diff-so-fancy # new diff
 
 brew install micro
+brew install vim
+brew install nano
+brew install openssh
 
-brew cask install chromium
-brew cask install docker
-brew cask install enpass
-brew cask install google-chrome
-brew cask install pastebot
-brew cask install postman
-brew cask install spotify
-brew cask install typora
-brew cask install visual-studio-code
+brew install z
+brew install jq
+
+brew install --cask discord
+brew install --cask docker
+brew install --cask enpass
+brew install --cask imageoptim
+brew install --cask pastebot
+brew install --cask postman
+brew install --cask signal
+brew install --cask spotify
+brew install --cask threema
+brew install --cask typora
+brew install --cask visual-studio-code
 
 # Install my favorite monospace font
 brew install homebrew/cask-fonts/font-hasklig
-
-# auto completion for docker
-ln -s /Applications/Docker.app/Contents/Resources/etc/*.bash-completion $(brew --prefix)/etc/bash_completion.d
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -1,3 +1,4 @@
+return
 
 source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
 
